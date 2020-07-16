@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         btnRead = (Button) findViewById(R.id.btnRead);
         tv = (TextView) findViewById(R.id.tv);
 
+        int permissionCheck_Storage = ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         folderLocation = Environment.getExternalStorageDirectory().getAbsolutePath() +
                 "/MyFolder";
 
